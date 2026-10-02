@@ -25,6 +25,12 @@ const books = [
     author: "J.K. Rowling",
     genre: "Fantasy",
   },
+  {
+  id: 4,
+  title: "The Fault in Our Stars",
+  author: "John Green",
+  genre: "Romance",
+  },
 ];
 
 app.get("/", (req, res) => {

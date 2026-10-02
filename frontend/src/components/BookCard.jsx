@@ -8,12 +8,22 @@ function BookCard({
 }) {
   return (
     <div className="book-card">
-      <h3>{title}</h3>
-      <p>Author: {author}</p>
-      <p>Genre: {genre}</p>
+      <div className="book-card-top">
+        <span className="book-emoji">📖</span>
+        <span className="genre-tag">{genre}</span>
+      </div>
 
-      <button onClick={() => onToggleFavorite(id)}>
-        {isFavorite ? "♥ Remove from Favorites" : "♡ Add to Favorites"}
+      <h3>{title}</h3>
+
+      <p className="book-author">
+        <span>by</span> {author}
+      </p>
+
+      <button
+        onClick={() => onToggleFavorite(id)}
+        className={isFavorite ? "favorite-button active" : "favorite-button"}
+      >
+        {isFavorite ? "♥  Remove Favorite" : "♡  Add to Favorites"}
       </button>
     </div>
   );
